@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DecodePro - Modern Decoding Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>DecodePro</h1>
+      <p class="subtitle">Modern encoding and decoding tool for developers</p>
+      <div class="theme-toggle" id="themeToggle">
+        <span id="themeIcon">🌙</span>
+        <span id="themeText">Dark Mode</span>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <h2>Decoder Tool</h2>
+        <div class="control-panel">
+          <select id="decodeType">
+            <option value="base64">Base64 Decode</option>
+            <option value="base64encode">Base64 Encode</option>
+            <option value="url">URL Decode</option>
+            <option value="urlencode">URL Encode</option>
+            <option value="html">HTML Decode</option>
+            <option value="htmlencode">HTML Encode</option>
+            <option value="jwt">JWT Decode</option>
+            <option value="hexToAscii">Hex to ASCII</option>
+            <option value="asciiToHex">ASCII to Hex</option>
+            <option value="binaryToText">Binary to Text</option>
+            <option value="textToBinary">Text to Binary</option>
+          </select>
+          <button id="decodeBtn">
+            <span>Process</span>
+          </button>
+          <button id="swapBtn" class="btn-secondary">
+            <span>↑↓ Swap</span>
+          </button>
+        </div>
+
+        <div class="io-container">
+          <div class="io-box">
+            <div class="toolbar">
+              <h3>Input</h3>
+              <div class="toolbar-actions">
+                <button id="clearInputBtn" class="btn-danger">Clear</button>
+                <button id="pasteBtn" class="btn-secondary">Paste</button>
+              </div>
+            </div>
+            <textarea
+              id="inputText"
+              placeholder="Enter your encoded data here..."></textarea>
+          </div>
+          <div class="io-box">
+            <div class="toolbar">
+              <h3>Output</h3>
+              <div class="toolbar-actions">
+                <button id="clearOutputBtn" class="btn-danger">Clear</button>
+                <button id="copyBtn" class="btn-success">Copy</button>
+              </div>
+            </div>
+            <textarea
+              id="outputText"
+              placeholder="Decoded result will appear here..."
+              readonly></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Base64 Encoding/Decoding</h3>
+          <p>
+            Convert text to and from Base64 format, commonly used for encoding
+            binary data in mail attachments and web data.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>URL Encoding/Decoding</h3>
+          <p>
+            Process URL-encoded strings that replace special characters with %
+            followed by hexadecimal digits.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>HTML Encoding/Decoding</h3>
+          <p>
+            Convert HTML entities (like &amp;lt;) to and from their
+            corresponding characters.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>JWT Decoder</h3>
+          <p>
+            Decode JSON Web Tokens to view header and payload data without
+            verification.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Hex Conversions</h3>
+          <p>
+            Convert between hexadecimal values and ASCII text for binary data
+            representation.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Binary Conversions</h3>
+          <p>
+            Transform binary code (0s and 1s) to readable text and vice versa.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="alert" class="alert"></div>
+
+    <footer>
+      <p>DecodePro © 2023 - A modern encoding/decoding tool</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
